@@ -11,8 +11,10 @@
     "lint": "next lint --fix --dir pages --dir components --dir lib --dir layouts --dir scripts"
   },
   "dependencies": {
+    "@hookform/resolvers": "^3.1.0",
     "@next/bundle-analyzer": "13.1.6",
     "@next/font": "13.1.6",
+    "@phosphor-icons/react": "^2.0.9",
     "@tailwindcss/forms": "^0.5.3",
     "@tailwindcss/typography": "^0.5.9",
     "autoprefixer": "^10.4.13",
@@ -29,6 +31,7 @@
     "postcss": "^8.4.16",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-hook-form": "^7.43.9",
     "reading-time": "1.5.0",
     "rehype-autolink-headings": "^6.1.0",
     "rehype-citation": "^0.5.0",
@@ -40,7 +43,8 @@
     "remark-gfm": "^3.0.1",
     "remark-math": "^5.1.1",
     "tailwindcss": "^3.2.2",
-    "unist-util-visit": "^4.1.0"
+    "unist-util-visit": "^4.1.0",
+    "yup": "^1.1.1"
   },
   "devDependencies": {
     "@svgr/webpack": "^6.3.1",
