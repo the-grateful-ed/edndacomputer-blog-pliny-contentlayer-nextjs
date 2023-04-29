@@ -1,43 +1,26 @@
-import siteMetadata from '@/data/siteMetadata'
-import headerNavLinks from '@/data/headerNavLinks'
-import Logo from '@/data/logo.svg'
-import Link from './Link'
-import MobileNav from './MobileNav'
-import ThemeSwitch from './ThemeSwitch'
+import React from 'react'
+import Image from 'next/image'
+import Nav from './Nav'
 
 const Header = () => {
   return (
-    <header className="flex items-center justify-between py-10">
+    <header
+      className={`mx-auto my-1 flex w-full flex-col items-center justify-between px-3 md:flex-col`}
+    >
       <div>
-        <Link href="/" aria-label={siteMetadata.headerTitle}>
-          <div className="flex items-center justify-between">
-            <div className="mr-3">
-              <Logo />
-            </div>
-            {typeof siteMetadata.headerTitle === 'string' ? (
-              <div className="hidden h-6 text-2xl font-semibold sm:block">
-                {siteMetadata.headerTitle}
-              </div>
-            ) : (
-              siteMetadata.headerTitle
-            )}
-          </div>
-        </Link>
-      </div>
-      <div className="flex items-center text-base leading-5">
-        <div className="hidden sm:block">
-          {headerNavLinks.map((link) => (
-            <Link
-              key={link.title}
-              href={link.href}
-              className="p-1 font-medium text-gray-900 dark:text-gray-100 sm:p-4"
-            >
-              {link.title}
-            </Link>
-          ))}
+        <div className={`flex flex-col items-center`}>
+          <Image
+            src="/static/images/beaker.png"
+            alt="beaker"
+            width={80}
+            height={80}
+            objectFit={`cover`}
+          />
         </div>
-        <ThemeSwitch />
-        <MobileNav />
+        <span className={`text-primary mx-2 text-xl font-thin md:text-4xl`}>edndacomputer </span>
+      </div>
+      <div>
+        <Nav />
       </div>
     </header>
   )
