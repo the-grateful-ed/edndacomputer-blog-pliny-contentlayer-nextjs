@@ -50,7 +50,6 @@ export const Form = () => {
           method="POST"
           data-netlify="true"
           onSubmit={handleSubmit(onSubmit)}
-          novalidate=""
           className="ng-untouched ng-pristine ng-valid flex flex-col space-y-6 py-6 md:px-6 md:py-0"
         >
           <label className="block">
