@@ -31,7 +31,7 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
             {/* {siteMetadata.description} */}
           </p>
         </div>
-        <ul className="max-w-4xl mx-auto divide-gray-200 dark:divide-gray-700">
+        <ul className="mx-auto max-w-4xl divide-gray-200 dark:divide-gray-700">
           {!posts.length && 'No posts found.'}
           {posts.slice(0, MAX_DISPLAY).map((post) => {
             const { slug, date, title, summary, tags } = post
