@@ -18,7 +18,7 @@ const Button = ({ children, size, color, icon }) => {
   const getColorClass = (color) => {
     switch (color) {
       case 'primary':
-        return 'bg-primary hover:bg-primary-dark text-white'
+        return 'bg-primary hover:bg-primary text-white'
       case 'secondary':
         return 'bg-gray-500 hover:bg-gray-600 text-white'
       default:
