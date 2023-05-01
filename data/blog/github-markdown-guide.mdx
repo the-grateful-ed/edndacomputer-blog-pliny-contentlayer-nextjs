@@ -5,7 +5,66 @@ tags: ['github', 'guide']
 draft: false
 summary: 'Markdown cheatsheet for all your blogging needs - headers, lists, images, tables and more! An illustrated guide based on GitHub Flavored Markdown.'
 ---
+## Introduction
+Oh-My-Zsh is a popular ZSH framework which includes a series of sensible configurations, helpful aliases, and pretty themes. However, it can be quite heavy and its plugin architecture might not be as well-designed as one would like. To gain more control over your setup with minimum config, you can use Antigen, a plugin manager for ZSH inspired by Pathogen, which is a plugin manager for Vim [^phuctm97.com^].
 
+## Setting up Oh-My-Zsh with Antigen
+To set up Oh-My-Zsh with Antigen, first, you need to add `antigen use oh-my-zsh` to your `~/.antigenrc` file. Then, you can enable Oh-My-Zsh plugins and themes by adding the following lines to your `~/.antigenrc` file [^phuctm97.com^]:
+
+```
+# Turn on an Oh my Zsh plugin
+antigen bundle plugin-name
+antigen bundle git
+antigen bundle command-not-found
+antigen bundle docker
+
+# Apply an Oh my Zsh theme
+antigen theme theme-name
+antigen theme robbyrussell
+```
+
+Refer to the following links for a full list of Oh-My-Zsh plugins and themes:
+
+- [Oh-My-Zsh Plugins](https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins)
+- [Oh-My-Zsh Themes](https://github.com/ohmyzsh/ohmyzsh/wiki/Themes)
+
+## Adding the NVM Plugin
+To add the NVM plugin for switching Node.js versions, you can use the following lines in your `~/.antigenrc` file [^medium.com^]:
+
+```
+# NVM bundle
+export NVM_LAZY_LOAD=true
+antigen bundle lukechilds/zsh-nvm
+antigen bundle Sparragus/zsh-auto-nvm-use
+```
+
+This configuration enables the NVM plugin with lazy loading, which improves startup time.
+
+## Other Useful Plugins
+Here are some other useful plugins that you can add to your `~/.antigenrc` file [^medium.com^]:
+
+```
+antigen bundle git
+antigen bundle heroku
+antigen bundle pip
+antigen bundle lein
+antigen bundle command-not-found
+antigen bundle autojump
+antigen bundle common-aliases
+antigen bundle compleat
+antigen bundle git-extras
+antigen bundle git-flow
+antigen bundle npm
+antigen bundle web-search
+antigen bundle z
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-users/zsh-history-substring-search ./zsh-history-substring-search.zsh
+```
+
+Remember to run `antigen apply` after adding new plugins to your `~/.antigenrc` file.
+
+## Conclusion
+Using Antigen with Oh-My-Zsh allows you to have more control over your ZSH setup while maintaining the benefits of the Oh-My-Zsh framework. With the NVM plugin and other useful plugins, you can easily customize your command line experience and improve your productivity.
 # Introduction
 
 Markdown and Mdx parsing is supported via `unified`, and other remark and rehype packages. `next-mdx-remote` allows us to parse `.mdx` and `.md` files in a more flexible manner without touching webpack.
