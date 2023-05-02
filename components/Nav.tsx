@@ -7,7 +7,7 @@ const Nav = () => {
     { path: '/', label: 'Home' },
     { path: '/about', label: 'About' },
     { path: '/blog', label: 'Blog' },
-    { path: '/contact', label: 'Contact' },
+    // { path: '/contact', label: 'Contact' },
   ]
   return (
     <nav className="flex justify-around bg-white py-8">

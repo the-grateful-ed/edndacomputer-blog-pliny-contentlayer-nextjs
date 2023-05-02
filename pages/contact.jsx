@@ -27,11 +27,9 @@ export const Form = () => {
   return (
     <section className=" bg-white py-12 text-gray-900 md:py-24">
       <div className="mx-auto grid max-w-6xl grid-cols-1 px-6 md:grid-cols-2 md:divide-x lg:px-8 ">
-        <div className="flex flex-col items-center justify-center rounded-lg bg-gray-300 p-4 py-6 shadow-lg md:px-6 md:py-0">
-          <h1 className="text-4xl font-bold">Get in touch</h1>
-          <p className="pb-4 pt-2">Fill in the form to start a conversation</p>
+        <div className="flex flex-row items-center justify-center rounded-lg bg-gray-300 p-4 py-6 shadow-lg md:px-6 md:py-0">
           <div className="space-y-4">
-            <p className="flex items-center">
+            <p className="flex items-center flex-row">
               <MapPin size={48} color="#ff66b3" weight="duotone" />
               <span>Fake address, 9999 City</span>
             </p>
@@ -80,9 +78,7 @@ export const Form = () => {
               className="focus:ring-primary-dark block w-full rounded-md bg-gray-100 focus:ring focus:ring-opacity-75"
             ></textarea>
           </label>
-          <Button className="self-center" color="primary">
             <input type="submit" />
-          </Button>
         </form>
       </div>
     </section>
