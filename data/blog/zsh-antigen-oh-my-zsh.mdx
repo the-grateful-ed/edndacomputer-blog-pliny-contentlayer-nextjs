@@ -5,10 +5,13 @@ tags: ['Oh-My-ZshAntigen', 'ZSH Plugins']
 draft: false
 summary: 'This article explains how to set up Oh-My-Zsh with Antigen, a plugin manager for ZSH. It also includes instructions on how to add useful plugins like NVM and lists other plugins that can improve productivity.'
 ---
+
 ## Introduction
+
 Oh-My-Zsh is a popular ZSH framework which includes a series of sensible configurations, helpful aliases, and pretty themes. However, it can be quite heavy and its plugin architecture might not be as well-designed as one would like. To gain more control over your setup with minimum config, you can use Antigen, a plugin manager for ZSH inspired by Pathogen, which is a plugin manager for Vim [^phuctm97.com^].
 
 ## Setting up Oh-My-Zsh with Antigen
+
 To set up Oh-My-Zsh with Antigen, first, you need to add `antigen use oh-my-zsh` to your `~/.antigenrc` file. Then, you can enable Oh-My-Zsh plugins and themes by adding the following lines to your `~/.antigenrc` file [^phuctm97.com^]:
 
 ```
@@ -29,6 +32,7 @@ Refer to the following links for a full list of Oh-My-Zsh plugins and themes:
 - [Oh-My-Zsh Themes](https://github.com/ohmyzsh/ohmyzsh/wiki/Themes)
 
 ## Adding the NVM Plugin
+
 To add the NVM plugin for switching Node.js versions, you can use the following lines in your `~/.antigenrc` file [^medium.com^]:
 
 ```
@@ -41,6 +45,7 @@ antigen bundle Sparragus/zsh-auto-nvm-use
 This configuration enables the NVM plugin with lazy loading, which improves startup time.
 
 ## Other Useful Plugins
+
 Here are some other useful plugins that you can add to your `~/.antigenrc` file [^medium.com^]:
 
 ```
@@ -64,4 +69,5 @@ antigen bundle zsh-users/zsh-history-substring-search ./zsh-history-substring-se
 Remember to run `antigen apply` after adding new plugins to your `~/.antigenrc` file.
 
 ## Conclusion
+
 Using Antigen with Oh-My-Zsh allows you to have more control over your ZSH setup while maintaining the benefits of the Oh-My-Zsh framework. With the NVM plugin and other useful plugins, you can easily customize your command line experience and improve your productivity.
