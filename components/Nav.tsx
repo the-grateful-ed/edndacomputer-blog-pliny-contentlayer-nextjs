@@ -9,8 +9,8 @@ const Nav = () => {
     { path: '/blog', label: 'Blog' },
   ]
   return (
-    <nav className="flex justify-center bg-white py-8 flex flex-col text-center">
-      <div className="flex space-x-4 mx-auto">
+    <nav className="flex flex flex-col justify-center bg-white py-8 text-center">
+      <div className="mx-auto flex space-x-4">
         {links.map(({ path, label }) => (
           <Link key={path} href={path} passHref>
             <div
@@ -23,7 +23,9 @@ const Nav = () => {
           </Link>
         ))}
       </div>
-      <span className='text-xs mx-auto text-pink-500 hover:text-pink-600 hover:scale-110 transition duration-300 pt-4'><a href="mailto:edndacomputer@riseup.net">edndacomputer@riseup.net</a></span>
+      <span className="mx-auto pt-4 text-xs text-pink-500 transition duration-300 hover:scale-110 hover:text-pink-600">
+        <a href="mailto:edndacomputer@riseup.net">edndacomputer@riseup.net</a>
+      </span>
     </nav>
   )
 }
